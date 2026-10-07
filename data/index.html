@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Arcade Steering Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>MINI ARCADE RACER</h1>
+        
+        <!-- Game Canvas -->
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="300" height="350"></canvas>
+            <div id="gameOverOverlay" class="hidden">
+                <h2>CRASHED!</h2>
+                <button onclick="resetGame()">PLAY AGAIN</button>
+            </div>
+        </div>
+
+        <div class="telemetry">
+            <div>ANGLE: <span id="angleVal">90</span>°</div>
+            <div>SCORE: <span id="scoreVal">0</span></div>
+        </div>
+
+        <!-- Interactive Steering Wheel -->
+        <div class="wheel-container">
+            <div id="steeringWheel">
+                <div class="wheel-center"></div>
+                <div class="wheel-spoke spoke-left"></div>
+                <div class="wheel-spoke spoke-right"></div>
+                <div class="wheel-spoke spoke-bottom"></div>
+            </div>
+        </div>
+
+        <p class="controls-hint">Drag wheel left/right OR use <b>← / →</b> Keys</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
